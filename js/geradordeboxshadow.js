@@ -58,17 +58,10 @@ class BoxShadowGenerator {
     const shadowRule = `${this.insetRef ? "inset" : ""} ${this.horizontalRef.value}px ${this.verticalRef.value}px 
     ${this.blurRef.value}px ${this.spreadRef.value}px rgba(${rgbValue}, ${this.opacityRef.value})`;
 
-    // Define a sombra
     this.previewBox.style.boxShadow = shadowRule;
-
-    // Define a cor e a imagem de fundo ao mesmo tempo, colocando a cor embaixo e a imagem por cima
-    this.previewBox.style.background = `linear-gradient(${this.colorRef.value}, ${this.color.value}),`;
-    this.previewBox.style.backgroundSize = "cover"; // Ajusta o tamanho da imagem para cobrir o quadrado
-    this.previewBox.style.backgroundPosition = "center"; // Centraliza a imagem
-
     this.currentRule = shadowRule;
-}
 
+  }
 
   showRule() {
     this.rule.innerText = this.currentRule;
@@ -112,7 +105,7 @@ class BoxShadowGenerator {
     ${("0x" + hex[5] + hex[6]) | 0}
     `;
   };
-}
+};
 
 // Selecionar elementos
 const horizontal = document.querySelector("#horizontal");
@@ -127,7 +120,6 @@ const previewBox = document.querySelector("#box");
 
 const color = document.querySelector("#color");
 const colorRef = document.querySelector("#color-value");
-
 
 const opacity = document.querySelector("#opacity");
 const opacityRef = document.querySelector("#opacity-value");
@@ -193,12 +185,6 @@ color.addEventListener("input", (e) => {
   boxShadow.updateValue("color", value);
 });
 
-box-quadrado.addEventListener("color", (e) => {
-  const value = e.target.value;
-  
-  boxShadow.updateValue("box", value);
-});
-
 opacity.addEventListener("input", (e) => {
   const value = e.target.value;
 
@@ -220,7 +206,7 @@ rulesArea.addEventListener("click", () => {
     const rules = rulesArea.innerText.replace(/^\s*\n/gm, "");
 
     navigator.clipboard.writeText(rules).then(() => {
-      copyInstructions.innerText = "Regra copiada com sucesso!, Vou Copiar tudo bem?";
+      copyInstructions.innerText = "Regra copiada com sucesso!, Estou copiando!";
 
 
 
