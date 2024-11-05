@@ -182,8 +182,16 @@ blur.addEventListener("input", (e) => {
 color.addEventListener("input", (e) => {
   const value = e.target.value;
 
+  boxShadow.updateValue("box", value);
+});
+
+color.addEventListener("input", (e) => {
+  const value = e.target.value;
+
   boxShadow.updateValue("color", value);
 });
+
+
 
 opacity.addEventListener("input", (e) => {
   const value = e.target.value;
