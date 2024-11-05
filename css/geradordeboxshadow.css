@@ -103,6 +103,10 @@ h2 {
     -moz-box-shadow: rgb(0, 0, 0) 62px 82px 79px 3px;
 }
 
+.range-input-quadrado {
+    height: -50px;
+    margin: 0 auto;
+}
 
 /* Área de Geração */
 #generated-rule {
@@ -117,7 +121,7 @@ h2 {
     background-color: #d3d3d3;
     max-width: 1000px;
     margin: 0 auto;
-    border: 2px solid #e9d60a;
+    border: 2px solid #0a9be9;
     transition: 0.4s;
     cursor: pointer;
 }
