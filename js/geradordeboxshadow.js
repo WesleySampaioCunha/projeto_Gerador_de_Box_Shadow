@@ -105,7 +105,7 @@ class BoxShadowGenerator {
     ${("0x" + hex[5] + hex[6]) | 0}
     `;
   };
-};
+}
 
 // Selecionar elementos
 const horizontal = document.querySelector("#horizontal");
@@ -182,16 +182,8 @@ blur.addEventListener("input", (e) => {
 color.addEventListener("input", (e) => {
   const value = e.target.value;
 
-  boxShadow.updateValue("box", value);
-});
-
-color.addEventListener("input", (e) => {
-  const value = e.target.value;
-
   boxShadow.updateValue("color", value);
 });
-
-
 
 opacity.addEventListener("input", (e) => {
   const value = e.target.value;
