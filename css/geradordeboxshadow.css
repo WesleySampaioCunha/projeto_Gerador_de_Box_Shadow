@@ -1,11 +1,14 @@
 @charset "UTF-8";
 
 *{
-    font-family: "Helvetica", "Verdana";
+    font-family: "Verdana";
     margin: 0;
     padding: 0;
 }
 
+body {
+    padding-bottom: 500px;
+}
 
 h2 {
     margin-bottom: 1.6rem;
@@ -15,16 +18,16 @@ h2 {
 
 #box-shadow-generator {
     display: flex;
-    max-height: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 #controls-container, #preview {
-    flex: 1;
+    flex:  1;
     padding: 2rem;
 }
 
-/* CONTROLES do Box */
+/* CONTROLES*/
 .form-control {
     display: flex;
     padding-bottom: 1.2rem;
@@ -44,26 +47,21 @@ h2 {
     flex: 1;
 }
 
-.range-input input[type="range"] {
+.range-input input[type="range"]{
+    -webkit-appearance: none;
     width: 100%;
     height: 24px;
     background-color: #D3D3D3;
     outline: none;
 }
 
+
 .range-input input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
     width: 25px;
     height: 25px;
     background-color: #e9d60a;
     cursor: pointer;
-}
-
-.range-input-quadrado {
-    display: flex;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    color: #555;
-    font-weight: bold;
 }
 
 .reference-input {
@@ -82,7 +80,8 @@ h2 {
     text-align: center;
 }
 
-/* Novas Funcionalidade */ 
+
+/* Novas Funcionalidade */
 #color-value {
     min-width: 100px;
 }
@@ -93,6 +92,7 @@ h2 {
     width: 20px;
 }
 
+
 /* Preview */
 #box {
     width: 100%;
@@ -102,6 +102,7 @@ h2 {
     -webkit-box-shadow: rgb(0, 0, 0) 62px 82px 79px 3px;
     -moz-box-shadow: rgb(0, 0, 0) 62px 82px 79px 3px;
 }
+
 
 /* Área de Geração */
 #generated-rule {
@@ -117,9 +118,10 @@ h2 {
     max-width: 1000px;
     margin: 0 auto;
     border: 2px solid #e9d60a;
-    transition: .4s;
+    transition: 0.4s;
     cursor: pointer;
 }
+
 
 #rules-area:hover {
     background-color: #DFDFDF;
@@ -130,6 +132,46 @@ h2 {
     margin-top: 1rem;
 }
 
+/* Responsivo Mobile */
+@media (max-width: 430px) {
+    #controls-container,
+    #preview {
+      padding: 1rem 2rem;
+    }
+  
+    #box-shadow-generator {
+      flex-direction: column;
+    }
+  
+    #box {
+      width: 60%;
+      height: 200px;
+      margin: 0 auto;
+    }
+  
+    #generated-rule {
+      margin-top: 1.5rem;
+    }
+  }
+
+  /*box-shadow: 78px 89px
+  29px 2px rgba(
+  0
+  0,
+  0
+  , 1);
+  -webkit-box-shadow: 78px 89px
+  29px 2px rgba(
+  0
+  0,
+  0
+  , 1);
+  -moz-box-shadow: 78px 89px
+  29px 2px rgba(
+  0
+  0,
+  0
+  , 1);*/
 
 
 
